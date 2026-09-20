@@ -1,0 +1,9 @@
+--- _my_model_8/model/climp_par.py
++++ _my_model_8/model/climp_par.py
+@@ -10,6 +10,6 @@
+ from .cross_mamba import CrossModalMambaBlock
+ 
+ class CLIMPPAR(nn.Module):
+     def __init__(self, config):
+         super().__init__()
+         self.config = config

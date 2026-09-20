@@ -1,0 +1,3 @@
+[domain_noper_images_inpainted_refined](file;file:///media/catashiro31/DATA/Nghi%C3%AAn%20c%E1%BB%A9u%20khoa%20h%E1%BB%8Dc/Pedestrain%20Attribute%20Recognition/domain_noper_images_inpainted_refined) đây là folder dữ liệu ảnh domain tôi muốn một piple line để sinh ra domain token thông qua [domain_tokens](file;file:///media/catashiro31/DATA/Nghi%C3%AAn%20c%E1%BB%A9u%20khoa%20h%E1%BB%8Dc/Pedestrain%20Attribute%20Recognition/_my_model_8/domain_tokens) 
+Domain token là dựa trên trung bình và độ lệch chuẩn, được tính từ the final visual feature embeddings của từng domain sau đó qua the projector.
+Vision encoder sẽ là Vmamba-small về kích thước cũng như padding cho ảnh giống trong phần đã có. Sau đó tìm cách lưu trữ domain đó ra file.
