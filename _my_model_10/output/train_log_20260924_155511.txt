@@ -1,0 +1,12 @@
+============================================================
+CLIMP-PAR Training
+  Device: Single GPU (world_size=1)
+  VMamba: tiny
+  Mamba Text: mamba-130m
+  Embed dim: 768
+  Batch size (per GPU): 16
+  Grad accum: 1
+  Effective batch: 16
+  AMP: True (fp16)
+  Epochs: 30
+============================================================

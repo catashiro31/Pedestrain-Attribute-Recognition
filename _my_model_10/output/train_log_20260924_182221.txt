@@ -1,0 +1,33 @@
+============================================================
+CLIMP-PAR Training
+  Device: DDP (world_size=2)
+  VMamba: tiny
+  Mamba Text: mamba-130m
+  Embed dim: 768
+  Batch size (per GPU): 24
+  Grad accum: 1
+  Effective batch: 48
+  AMP: True (bfloat16)
+  Epochs: 30
+============================================================
+[TRAIN Dataset] Đã kích hoạt RAM Cache (sẽ nạp 29332 ảnh vào RAM trong epoch đầu)
+[VAL Dataset] Đã kích hoạt RAM Cache (sẽ nạp 5796 ảnh vào RAM trong epoch đầu)
+
+Dataset: MSP60k
+  Train: 29332 samples
+  Val: 5796 samples
+  Attributes: 57
+[VMamba] Đã tải pretrained weights cho tiny thành công!
+[BackgroundEncoder] Loaded weights từ resnet18_background_best.pth
+[MambaText] Đang tải model 'state-spaces/mamba-130m-hf'...
+[MambaText] Bỏ qua config keys: {'hidden_size', 'intermediate_size', 'bos_token_id', 'use_conv_bias', 'architectures', 'd_inner', 'hidden_act', 'use_cache', 'time_step_floor', 'model_type', 'layer_norm_epsilon', 'state_size', 'use_bias', 'rescale_prenorm_residual', 'pad_token_id', 'time_step_rank', 'time_step_init_scheme', 'time_step_scale', 'time_step_max', 'time_step_min', 'eos_token_id', 'transformers_version', 'initializer_range', 'torch_dtype', 'num_hidden_layers', 'expand', 'conv_kernel'}
+[MambaText] Tải weights từ safetensors thành công!
+[MambaText] Tải model thành công!
+[MambaText] Backbone đã được đóng băng (freeze).
+[MambaText] Khởi tạo thành công: mamba-130m
+[MambaText]   d_model=768, embed_dim=768
+[HiddenWords] Đã khởi tạo các tokens bằng word embeddings có ý nghĩa thay vì noise.
+
+Model parameters:
+  Total: 170.3M
+  Trainable: 28.7M

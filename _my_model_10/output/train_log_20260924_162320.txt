@@ -1,0 +1,52 @@
+============================================================
+CLIMP-PAR Training
+  Device: DDP (world_size=2)
+  VMamba: tiny
+  Mamba Text: mamba-130m
+  Embed dim: 768
+  Batch size (per GPU): 16
+  Grad accum: 1
+  Effective batch: 32
+  AMP: True (bfloat16)
+  Epochs: 30
+============================================================
+[TRAIN Dataset] Đã kích hoạt RAM Cache (sẽ nạp 29332 ảnh vào RAM trong epoch đầu)
+[VAL Dataset] Đã kích hoạt RAM Cache (sẽ nạp 5796 ảnh vào RAM trong epoch đầu)
+
+Dataset: MSP60k
+  Train: 29332 samples
+  Val: 5796 samples
+  Attributes: 57
+[VMamba] Đã tải pretrained weights cho tiny thành công!
+[BackgroundEncoder] Loaded weights từ resnet18_background_best.pth
+[MambaText] Đang tải model 'state-spaces/mamba-130m-hf'...
+[MambaText] Bỏ qua config keys: {'intermediate_size', 'use_cache', 'pad_token_id', 'use_bias', 'hidden_act', 'd_inner', 'rescale_prenorm_residual', 'use_conv_bias', 'torch_dtype', 'time_step_min', 'conv_kernel', 'expand', 'time_step_init_scheme', 'layer_norm_epsilon', 'time_step_rank', 'time_step_scale', 'time_step_max', 'num_hidden_layers', 'state_size', 'initializer_range', 'eos_token_id', 'transformers_version', 'time_step_floor', 'hidden_size', 'architectures', 'model_type', 'bos_token_id'}
+[MambaText] Tải weights từ safetensors thành công!
+[MambaText] Tải model thành công!
+[MambaText] Backbone đã được đóng băng (freeze).
+[MambaText] Khởi tạo thành công: mamba-130m
+[MambaText]   d_model=768, embed_dim=768
+[HiddenWords] Đã khởi tạo các tokens bằng word embeddings có ý nghĩa thay vì noise.
+  [Tối ưu] Đang biên dịch mô hình với torch.compile()... (Sẽ mất vài phút ở epoch đầu tiên)
+
+Model parameters:
+  Total: 170.3M
+  Trainable: 30.0M
+  [Epoch 1] Batch 50/916 | Loss: 26.4825 | LR: 1.36e-06
+  [Epoch 1] Batch 100/916 | Loss: 25.1089 | LR: 2.73e-06
+  [Epoch 1] Batch 150/916 | Loss: 23.1315 | LR: 4.09e-06
+  [Epoch 1] Batch 200/916 | Loss: 21.1614 | LR: 5.46e-06
+  [Epoch 1] Batch 250/916 | Loss: 19.5708 | LR: 6.82e-06
+  [Epoch 1] Batch 300/916 | Loss: 18.3397 | LR: 8.19e-06
+  [Epoch 1] Batch 350/916 | Loss: 17.3401 | LR: 9.55e-06
+  [Epoch 1] Batch 400/916 | Loss: 16.4817 | LR: 1.09e-05
+  [Epoch 1] Batch 450/916 | Loss: 15.7578 | LR: 1.23e-05
+  [Epoch 1] Batch 500/916 | Loss: 15.1387 | LR: 1.36e-05
+  [Epoch 1] Batch 550/916 | Loss: 14.5935 | LR: 1.50e-05
+  [Epoch 1] Batch 600/916 | Loss: 14.1098 | LR: 1.64e-05
+  [Epoch 1] Batch 650/916 | Loss: 13.6658 | LR: 1.77e-05
+  [Epoch 1] Batch 700/916 | Loss: 13.2594 | LR: 1.91e-05
+  [Epoch 1] Batch 750/916 | Loss: 12.8742 | LR: 2.05e-05
+  [Epoch 1] Batch 800/916 | Loss: 12.5412 | LR: 2.18e-05
+  [Epoch 1] Batch 850/916 | Loss: 12.2313 | LR: 2.32e-05
+  [Epoch 1] Batch 900/916 | Loss: 11.9286 | LR: 2.46e-05

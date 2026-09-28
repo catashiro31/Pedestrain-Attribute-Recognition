@@ -1,0 +1,111 @@
+============================================================
+CLIMP-PAR Training
+  Device: Single GPU (world_size=1)
+  VMamba: tiny
+  Mamba Text: mamba-130m
+  Embed dim: 768
+  Batch size (per GPU): 8
+  Grad accum: 1
+  Effective batch: 8
+  AMP: True (bfloat16)
+  Epochs: 30
+============================================================
+[TRAIN Dataset] Đã kích hoạt RAM Cache (sẽ nạp 29332 ảnh vào RAM trong epoch đầu)
+[TRAIN Dataset] Đang quét toàn bộ ảnh background (bao gồm thư mục con) tại ../MSP60k/SUBMIT/domain_noper_images_inpainted_refined...
+[TRAIN Dataset] Tìm thấy 60010 ảnh background sẵn sàng ghép nối.
+[VAL Dataset] Đã kích hoạt RAM Cache (sẽ nạp 5796 ảnh vào RAM trong epoch đầu)
+[VAL Dataset] Đang quét toàn bộ ảnh background (bao gồm thư mục con) tại ../MSP60k/SUBMIT/domain_noper_images_inpainted_refined...
+[VAL Dataset] Tìm thấy 60010 ảnh background sẵn sàng ghép nối.
+
+Dataset: MSP60k
+  Train: 29332 samples
+  Val: 5796 samples
+  Attributes: 57
+============================================================
+CLIMP-PAR Training
+  Device: Single GPU (world_size=1)
+  VMamba: tiny
+  Mamba Text: mamba-130m
+  Embed dim: 768
+  Batch size (per GPU): 8
+  Grad accum: 1
+  Effective batch: 8
+  AMP: True (bfloat16)
+  Epochs: 30
+============================================================
+============================================================
+CLIMP-PAR Training
+  Device: Single GPU (world_size=1)
+  VMamba: tiny
+  Mamba Text: mamba-130m
+  Embed dim: 768
+  Batch size (per GPU): 8
+  Grad accum: 1
+  Effective batch: 8
+  AMP: True (bfloat16)
+  Epochs: 30
+============================================================
+[TRAIN Dataset] Đã kích hoạt RAM Cache (sẽ nạp 29332 ảnh vào RAM trong epoch đầu)
+[TRAIN Dataset] Đang quét toàn bộ ảnh background (bao gồm thư mục con) tại ../MSP60k/SUBMIT/domain_noper_images_inpainted_refined...
+[TRAIN Dataset] Đã kích hoạt RAM Cache (sẽ nạp 29332 ảnh vào RAM trong epoch đầu)
+[TRAIN Dataset] Đang quét toàn bộ ảnh background (bao gồm thư mục con) tại ../MSP60k/SUBMIT/domain_noper_images_inpainted_refined...
+[TRAIN Dataset] Tìm thấy 60010 ảnh background sẵn sàng ghép nối.
+[TRAIN Dataset] Tìm thấy 60010 ảnh background sẵn sàng ghép nối.
+[VAL Dataset] Đã kích hoạt RAM Cache (sẽ nạp 5796 ảnh vào RAM trong epoch đầu)
+[VAL Dataset] Đang quét toàn bộ ảnh background (bao gồm thư mục con) tại ../MSP60k/SUBMIT/domain_noper_images_inpainted_refined...
+[VAL Dataset] Đã kích hoạt RAM Cache (sẽ nạp 5796 ảnh vào RAM trong epoch đầu)
+[VAL Dataset] Đang quét toàn bộ ảnh background (bao gồm thư mục con) tại ../MSP60k/SUBMIT/domain_noper_images_inpainted_refined...
+[VAL Dataset] Tìm thấy 60010 ảnh background sẵn sàng ghép nối.
+
+Dataset: MSP60k
+  Train: 29332 samples
+  Val: 5796 samples
+  Attributes: 57
+[VAL Dataset] Tìm thấy 60010 ảnh background sẵn sàng ghép nối.
+
+Dataset: MSP60k
+  Train: 29332 samples
+  Val: 5796 samples
+  Attributes: 57
+[VMamba] Đã tải pretrained weights cho tiny thành công!
+[BackgroundEncoder] Loaded weights từ resnet18_background_best.pth
+[VMamba] Đã tải pretrained weights cho tiny thành công!
+[MambaText] Đang tải model 'state-spaces/mamba-130m-hf'...
+[VMamba] Đã tải pretrained weights cho tiny thành công!
+[BackgroundEncoder] Loaded weights từ resnet18_background_best.pth
+[BackgroundEncoder] Loaded weights từ resnet18_background_best.pth
+[MambaText] Đang tải model 'state-spaces/mamba-130m-hf'...
+[MambaText] Đang tải model 'state-spaces/mamba-130m-hf'...
+[MambaText] Bỏ qua config keys: {'use_conv_bias', 'layer_norm_epsilon', 'intermediate_size', 'eos_token_id', 'use_cache', 'transformers_version', 'pad_token_id', 'time_step_rank', 'time_step_floor', 'architectures', 'time_step_max', 'hidden_act', 'state_size', 'hidden_size', 'model_type', 'num_hidden_layers', 'conv_kernel', 'rescale_prenorm_residual', 'time_step_init_scheme', 'time_step_min', 'd_inner', 'bos_token_id', 'expand', 'torch_dtype', 'use_bias', 'initializer_range', 'time_step_scale'}
+[MambaText] Bỏ qua config keys: {'torch_dtype', 'eos_token_id', 'state_size', 'use_bias', 'd_inner', 'use_conv_bias', 'num_hidden_layers', 'conv_kernel', 'bos_token_id', 'hidden_act', 'time_step_scale', 'model_type', 'intermediate_size', 'transformers_version', 'hidden_size', 'time_step_rank', 'time_step_floor', 'architectures', 'time_step_min', 'expand', 'pad_token_id', 'time_step_init_scheme', 'initializer_range', 'layer_norm_epsilon', 'time_step_max', 'rescale_prenorm_residual', 'use_cache'}
+[MambaText] Bỏ qua config keys: {'transformers_version', 'torch_dtype', 'layer_norm_epsilon', 'initializer_range', 'model_type', 'hidden_size', 'state_size', 'time_step_init_scheme', 'd_inner', 'rescale_prenorm_residual', 'use_conv_bias', 'eos_token_id', 'time_step_rank', 'conv_kernel', 'bos_token_id', 'time_step_scale', 'use_bias', 'hidden_act', 'num_hidden_layers', 'time_step_max', 'architectures', 'use_cache', 'time_step_floor', 'time_step_min', 'pad_token_id', 'expand', 'intermediate_size'}
+[MambaText] Tải weights từ safetensors thành công!
+[MambaText] Tải model thành công!
+[MambaText] Backbone đã được đóng băng (freeze).
+[MambaText] Khởi tạo thành công: mamba-130m
+[MambaText]   d_model=768, embed_dim=768
+[HiddenWords] Đã khởi tạo các tokens bằng word embeddings có ý nghĩa thay vì noise.
+
+Model parameters:
+  Total: 170.3M
+  Trainable: 30.0M
+[MambaText] Tải weights từ safetensors thành công!
+[MambaText] Tải weights từ safetensors thành công!
+[MambaText] Tải model thành công!
+[MambaText] Backbone đã được đóng băng (freeze).
+[MambaText] Khởi tạo thành công: mamba-130m
+[MambaText]   d_model=768, embed_dim=768
+[HiddenWords] Đã khởi tạo các tokens bằng word embeddings có ý nghĩa thay vì noise.
+[MambaText] Tải model thành công!
+[MambaText] Backbone đã được đóng băng (freeze).
+[MambaText] Khởi tạo thành công: mamba-130m
+[MambaText]   d_model=768, embed_dim=768
+[HiddenWords] Đã khởi tạo các tokens bằng word embeddings có ý nghĩa thay vì noise.
+
+Model parameters:
+  Total: 170.3M
+  Trainable: 30.0M
+
+Model parameters:
+  Total: 170.3M
+  Trainable: 30.0M

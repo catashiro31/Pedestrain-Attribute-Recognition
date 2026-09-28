@@ -1,0 +1,40 @@
+============================================================
+CLIMP-PAR Training
+  Device: Single GPU (world_size=1)
+  VMamba: tiny
+  Mamba Text: mamba-130m
+  Embed dim: 768
+  Batch size (per GPU): 16
+  Grad accum: 1
+  Effective batch: 16
+  AMP: True (fp16)
+  Epochs: 30
+============================================================
+[TRAIN Dataset] Đã kích hoạt RAM Cache (sẽ nạp 29332 ảnh vào RAM trong epoch đầu)
+[VAL Dataset] Đã kích hoạt RAM Cache (sẽ nạp 5796 ảnh vào RAM trong epoch đầu)
+
+Dataset: MSP60k
+  Train: 29332 samples
+  Val: 5796 samples
+  Attributes: 57
+[VMamba] Đang tải pretrained weights cho tiny từ GitHub...
+Downloading: "https://github.com/MzeroMiko/VMamba/releases/download/%23v0cls/vssmtiny_dp01_ckpt_epoch_292.pth" to /workspace/_my_model_9/model/../checkpoints/vmamba_tiny_pretrained.pth
+[VMamba] Tải thành công! Lưu tại: /workspace/_my_model_9/model/../checkpoints/vmamba_tiny_pretrained.pth
+[VMamba] Đã tải pretrained weights cho tiny thành công!
+[BackgroundEncoder] Loaded weights từ resnet18_background_best.pth
+[MambaText] Đang tải model 'state-spaces/mamba-130m-hf'...
+[MambaText] Bỏ qua config keys: {'layer_norm_epsilon', 'time_step_floor', 'hidden_size', 'state_size', 'use_bias', 'initializer_range', 'bos_token_id', 'pad_token_id', 'time_step_scale', 'd_inner', 'time_step_init_scheme', 'time_step_max', 'time_step_rank', 'intermediate_size', 'use_conv_bias', 'transformers_version', 'use_cache', 'num_hidden_layers', 'architectures', 'time_step_min', 'torch_dtype', 'conv_kernel', 'model_type', 'hidden_act', 'expand', 'eos_token_id', 'rescale_prenorm_residual'}
+[MambaText] Tải weights từ safetensors thành công!
+[MambaText] Tải model thành công!
+[MambaText] Backbone đã được đóng băng (freeze).
+[MambaText] Khởi tạo thành công: mamba-130m
+[MambaText]   d_model=768, embed_dim=768
+[HiddenWords] Đã khởi tạo các tokens bằng word embeddings có ý nghĩa thay vì noise.
+
+Model parameters:
+  Total: 170.3M
+  Trainable: 28.7M
+  ⚠️  [Epoch 1] Batch 1: Grad NaN/Inf → Skipping step
+  ⚠️  [Epoch 1] Batch 3: Grad NaN/Inf → Skipping step
+  ⚠️  [Epoch 1] Batch 20: Grad NaN/Inf → Skipping step
+  [Epoch 1] Batch 50/1833 | Loss: 26.7972 | LR: 6.41e-07

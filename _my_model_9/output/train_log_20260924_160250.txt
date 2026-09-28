@@ -1,0 +1,46 @@
+============================================================
+CLIMP-PAR Training
+  Device: DDP (world_size=2)
+  VMamba: tiny
+  Mamba Text: mamba-130m
+  Embed dim: 768
+  Batch size (per GPU): 16
+  Grad accum: 1
+  Effective batch: 32
+  AMP: True (fp16)
+  Epochs: 30
+============================================================
+[TRAIN Dataset] Đã kích hoạt RAM Cache (sẽ nạp 29332 ảnh vào RAM trong epoch đầu)
+[VAL Dataset] Đã kích hoạt RAM Cache (sẽ nạp 5796 ảnh vào RAM trong epoch đầu)
+
+Dataset: MSP60k
+  Train: 29332 samples
+  Val: 5796 samples
+  Attributes: 57
+[VMamba] Đã tải pretrained weights cho tiny thành công!
+[BackgroundEncoder] Loaded weights từ resnet18_background_best.pth
+[MambaText] Đang tải model 'state-spaces/mamba-130m-hf'...
+[MambaText] Bỏ qua config keys: {'num_hidden_layers', 'time_step_max', 'transformers_version', 'initializer_range', 'time_step_scale', 'state_size', 'pad_token_id', 'hidden_size', 'expand', 'eos_token_id', 'time_step_floor', 'torch_dtype', 'architectures', 'use_conv_bias', 'time_step_min', 'bos_token_id', 'layer_norm_epsilon', 'time_step_init_scheme', 'model_type', 'use_cache', 'intermediate_size', 'hidden_act', 'd_inner', 'time_step_rank', 'rescale_prenorm_residual', 'use_bias', 'conv_kernel'}
+[MambaText] Tải weights từ safetensors thành công!
+[MambaText] Tải model thành công!
+[MambaText] Backbone đã được đóng băng (freeze).
+[MambaText] Khởi tạo thành công: mamba-130m
+[MambaText]   d_model=768, embed_dim=768
+[HiddenWords] Đã khởi tạo các tokens bằng word embeddings có ý nghĩa thay vì noise.
+
+Model parameters:
+  Total: 170.3M
+  Trainable: 28.7M
+  ⚠️  [Epoch 1] Batch 1: Grad NaN/Inf (grad_norm=inf) → Skipping step
+       Debug - Loss trước khi backward: 27.42828369140625
+  ⚠️  [Epoch 1] Batch 2: Grad NaN/Inf (grad_norm=inf) → Skipping step
+       Debug - Loss trước khi backward: 27.07748031616211
+  ⚠️  [Epoch 1] Batch 5: Grad NaN/Inf (grad_norm=inf) → Skipping step
+       Debug - Loss trước khi backward: 27.019506454467773
+  ⚠️  [Epoch 1] Batch 24: Grad NaN/Inf (grad_norm=nan) → Skipping step
+       Debug - Loss trước khi backward: 26.741456985473633
+  [Epoch 1] Batch 50/916 | Loss: 26.5740 | LR: 1.26e-06
+  [Epoch 1] Batch 100/916 | Loss: 25.3754 | LR: 2.62e-06
+  [Epoch 1] Batch 150/916 | Loss: 23.5260 | LR: 3.98e-06
+  ⚠️  [Epoch 1] Batch 167: Grad NaN/Inf (grad_norm=inf) → Skipping step
+       Debug - Loss trước khi backward: 15.860221862792969

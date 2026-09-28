@@ -1,0 +1,60 @@
+============================================================
+CLIMP-PAR Training
+  Device: DDP (world_size=2)
+  VMamba: tiny
+  Mamba Text: mamba-130m
+  Embed dim: 768
+  Batch size (per GPU): 20
+  Grad accum: 1
+  Effective batch: 40
+  AMP: True (bfloat16)
+  Epochs: 30
+============================================================
+[TRAIN Dataset] Đã kích hoạt RAM Cache (sẽ nạp 29332 ảnh vào RAM trong epoch đầu)
+[VAL Dataset] Đã kích hoạt RAM Cache (sẽ nạp 5796 ảnh vào RAM trong epoch đầu)
+
+Dataset: MSP60k
+  Train: 29332 samples
+  Val: 5796 samples
+  Attributes: 57
+[VMamba] Đã tải pretrained weights cho tiny thành công!
+[BackgroundEncoder] Loaded weights từ resnet18_background_best.pth
+[MambaText] Đang tải model 'state-spaces/mamba-130m-hf'...
+[MambaText] Bỏ qua config keys: {'hidden_act', 'use_cache', 'initializer_range', 'time_step_scale', 'eos_token_id', 'state_size', 'time_step_init_scheme', 'use_bias', 'conv_kernel', 'num_hidden_layers', 'd_inner', 'time_step_floor', 'bos_token_id', 'torch_dtype', 'time_step_max', 'time_step_min', 'rescale_prenorm_residual', 'architectures', 'pad_token_id', 'expand', 'time_step_rank', 'use_conv_bias', 'intermediate_size', 'transformers_version', 'model_type', 'hidden_size', 'layer_norm_epsilon'}
+[MambaText] Tải weights từ safetensors thành công!
+[MambaText] Tải model thành công!
+[MambaText] Backbone đã được đóng băng (freeze).
+[MambaText] Khởi tạo thành công: mamba-130m
+[MambaText]   d_model=768, embed_dim=768
+[HiddenWords] Đã khởi tạo các tokens bằng word embeddings có ý nghĩa thay vì noise.
+
+Model parameters:
+  Total: 170.3M
+  Trainable: 30.0M
+  [Epoch 1] Batch 50/733 | Loss: 26.3820 | LR: 1.71e-06
+  [Epoch 1] Batch 100/733 | Loss: 24.6623 | LR: 3.41e-06
+  [Epoch 1] Batch 150/733 | Loss: 22.3117 | LR: 5.12e-06
+  [Epoch 1] Batch 200/733 | Loss: 20.2558 | LR: 6.82e-06
+  [Epoch 1] Batch 250/733 | Loss: 18.7036 | LR: 8.53e-06
+  [Epoch 1] Batch 300/733 | Loss: 17.5090 | LR: 1.02e-05
+  [Epoch 1] Batch 350/733 | Loss: 16.4999 | LR: 1.19e-05
+  [Epoch 1] Batch 400/733 | Loss: 15.6836 | LR: 1.36e-05
+  [Epoch 1] Batch 450/733 | Loss: 14.9927 | LR: 1.53e-05
+  [Epoch 1] Batch 500/733 | Loss: 14.3908 | LR: 1.71e-05
+  [Epoch 1] Batch 550/733 | Loss: 13.8527 | LR: 1.88e-05
+  [Epoch 1] Batch 600/733 | Loss: 13.3524 | LR: 2.05e-05
+  [Epoch 1] Batch 650/733 | Loss: 12.9192 | LR: 2.22e-05
+  [Epoch 1] Batch 700/733 | Loss: 12.5159 | LR: 2.39e-05
+
+============================================================
+Epoch 1/30 — 1580.1s
+  Train Loss: 12.2696
+  Val Loss:   6.7870
+  mA:         0.6099
+  Accuracy:   0.9485
+  Precision:  0.8488
+  Recall:     0.8126
+  F1:         0.8303
+============================================================
+
+  ★ Best model saved! mA=0.6099

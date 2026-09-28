@@ -1,0 +1,40 @@
+============================================================
+CLIMP-PAR Training
+  Device: DDP (world_size=2)
+  VMamba: tiny
+  Mamba Text: mamba-130m
+  Embed dim: 768
+  Batch size (per GPU): 20
+  Grad accum: 1
+  Effective batch: 40
+  AMP: True (bfloat16)
+  Epochs: 30
+============================================================
+[TRAIN Dataset] Đã kích hoạt RAM Cache (sẽ nạp 29332 ảnh vào RAM trong epoch đầu)
+[TRAIN Dataset] Đang quét toàn bộ ảnh background (bao gồm thư mục con) tại ../MSP60k/SUBMIT/domain_noper_images_inpainted_refined...
+[TRAIN Dataset] Tìm thấy 60010 ảnh background sẵn sàng ghép nối.
+[VAL Dataset] Đã kích hoạt RAM Cache (sẽ nạp 5796 ảnh vào RAM trong epoch đầu)
+[VAL Dataset] Đang quét toàn bộ ảnh background (bao gồm thư mục con) tại ../MSP60k/SUBMIT/domain_noper_images_inpainted_refined...
+[VAL Dataset] Tìm thấy 60010 ảnh background sẵn sàng ghép nối.
+
+Dataset: MSP60k
+  Train: 29332 samples
+  Val: 5796 samples
+  Attributes: 57
+[VMamba] Đã tải pretrained weights cho tiny thành công!
+[BackgroundEncoder] Loaded weights từ resnet18_background_best.pth
+[MambaText] Đang tải model 'state-spaces/mamba-130m-hf'...
+[MambaText] Bỏ qua config keys: {'time_step_floor', 'time_step_min', 'd_inner', 'intermediate_size', 'torch_dtype', 'use_conv_bias', 'transformers_version', 'eos_token_id', 'hidden_act', 'hidden_size', 'bos_token_id', 'pad_token_id', 'layer_norm_epsilon', 'conv_kernel', 'num_hidden_layers', 'rescale_prenorm_residual', 'use_cache', 'expand', 'time_step_max', 'time_step_scale', 'use_bias', 'architectures', 'model_type', 'time_step_rank', 'initializer_range', 'time_step_init_scheme', 'state_size'}
+[MambaText] Tải weights từ safetensors thành công!
+[MambaText] Tải model thành công!
+[MambaText] Backbone đã được đóng băng (freeze).
+[MambaText] Khởi tạo thành công: mamba-130m
+[MambaText]   d_model=768, embed_dim=768
+[HiddenWords] Đã khởi tạo các tokens bằng word embeddings có ý nghĩa thay vì noise.
+
+Model parameters:
+  Total: 170.3M
+  Trainable: 30.0M
+  [Epoch 1] Batch 50/733 | Loss: 26.3910 | LR: 1.71e-06
+  [Epoch 1] Batch 100/733 | Loss: 24.6715 | LR: 3.41e-06
+  [Epoch 1] Batch 150/733 | Loss: 22.3236 | LR: 5.12e-06

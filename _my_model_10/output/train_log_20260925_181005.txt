@@ -1,0 +1,40 @@
+============================================================
+CLIMP-PAR Training
+  Device: DDP (world_size=4)
+  VMamba: tiny
+  Mamba Text: mamba-130m
+  Embed dim: 768
+  Batch size (per GPU): 4
+  Grad accum: 1
+  Effective batch: 16
+  AMP: True (bfloat16)
+  Epochs: 1
+============================================================
+[TRAIN Dataset] Đã kích hoạt RAM Cache (sẽ nạp 30298 ảnh vào RAM trong epoch đầu)
+[TRAIN Dataset] Đang quét toàn bộ ảnh background (bao gồm thư mục con) tại /workspace/_my_model_9/../MSP60k/SUBMIT/domain_noper_images_inpainted_refined...
+[TRAIN Dataset] Tìm thấy 60010 ảnh background sẵn sàng ghép nối.
+[VAL Dataset] Đã kích hoạt RAM Cache (sẽ nạp 6002 ảnh vào RAM trong epoch đầu)
+[VAL Dataset] Đang quét toàn bộ ảnh background (bao gồm thư mục con) tại /workspace/_my_model_9/../MSP60k/SUBMIT/domain_noper_images_inpainted_refined...
+[VAL Dataset] Tìm thấy 60010 ảnh background sẵn sàng ghép nối.
+
+Dataset: MSP60k
+  Train: 30298 samples
+  Val: 6002 samples
+  Attributes: 57
+[VMamba] Đã tải pretrained weights cho tiny thành công!
+[BackgroundEncoder] Loaded weights từ resnet18_background_best.pth
+[MambaText] Đang tải model 'state-spaces/mamba-130m-hf'...
+[MambaText] Bỏ qua config keys: {'transformers_version', 'eos_token_id', 'hidden_act', 'state_size', 'layer_norm_epsilon', 'pad_token_id', 'torch_dtype', 'architectures', 'use_cache', 'time_step_max', 'time_step_init_scheme', 'model_type', 'initializer_range', 'num_hidden_layers', 'time_step_scale', 'rescale_prenorm_residual', 'expand', 'hidden_size', 'time_step_min', 'time_step_rank', 'd_inner', 'conv_kernel', 'time_step_floor', 'use_bias', 'bos_token_id', 'intermediate_size', 'use_conv_bias'}
+[MambaText] Tải weights từ safetensors thành công!
+[MambaText] Tải model thành công!
+[MambaText] Backbone đã được đóng băng (freeze).
+[MambaText] Khởi tạo thành công: mamba-130m
+[MambaText]   d_model=768, embed_dim=768
+[HiddenWords] Đã khởi tạo các tokens bằng word embeddings có ý nghĩa thay vì noise.
+
+Model parameters:
+  Total: 170.3M
+  Trainable: 30.0M
+  [Epoch 1] Batch 50/1893 | Loss: 27.7988 | LR: 6.60e-07
+  [Epoch 1] Batch 100/1893 | Loss: 27.5564 | LR: 1.32e-06
+  [Epoch 1] Batch 150/1893 | Loss: 27.0412 | LR: 1.98e-06

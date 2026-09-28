@@ -1,0 +1,118 @@
+============================================================
+CLIMP-PAR Training
+  Device: DDP (world_size=2)
+  VMamba: tiny
+  Mamba Text: mamba-130m
+  Embed dim: 768
+  Batch size (per GPU): 20
+  Grad accum: 1
+  Effective batch: 40
+  AMP: True (bfloat16)
+  Epochs: 30
+============================================================
+[TRAIN Dataset] Đã kích hoạt RAM Cache (sẽ nạp 29332 ảnh vào RAM trong epoch đầu)
+[TRAIN Dataset] Đang quét toàn bộ ảnh background (bao gồm thư mục con) tại ../MSP60k/SUBMIT/domain_noper_images_inpainted_refined...
+[TRAIN Dataset] Tìm thấy 60010 ảnh background sẵn sàng ghép nối.
+[VAL Dataset] Đã kích hoạt RAM Cache (sẽ nạp 5796 ảnh vào RAM trong epoch đầu)
+[VAL Dataset] Đang quét toàn bộ ảnh background (bao gồm thư mục con) tại ../MSP60k/SUBMIT/domain_noper_images_inpainted_refined...
+[VAL Dataset] Tìm thấy 60010 ảnh background sẵn sàng ghép nối.
+
+Dataset: MSP60k
+  Train: 29332 samples
+  Val: 5796 samples
+  Attributes: 57
+[VMamba] Đã tải pretrained weights cho tiny thành công!
+[BackgroundEncoder] Loaded weights từ resnet18_background_best.pth
+[MambaText] Đang tải model 'state-spaces/mamba-130m-hf'...
+[MambaText] Bỏ qua config keys: {'time_step_scale', 'layer_norm_epsilon', 'time_step_init_scheme', 'initializer_range', 'use_conv_bias', 'bos_token_id', 'architectures', 'num_hidden_layers', 'time_step_rank', 'use_cache', 'hidden_act', 'rescale_prenorm_residual', 'eos_token_id', 'hidden_size', 'time_step_floor', 'pad_token_id', 'conv_kernel', 'torch_dtype', 'time_step_min', 'time_step_max', 'model_type', 'd_inner', 'expand', 'use_bias', 'state_size', 'transformers_version', 'intermediate_size'}
+[MambaText] Tải weights từ safetensors thành công!
+[MambaText] Tải model thành công!
+[MambaText] Backbone đã được đóng băng (freeze).
+[MambaText] Khởi tạo thành công: mamba-130m
+[MambaText]   d_model=768, embed_dim=768
+[HiddenWords] Đã khởi tạo các tokens bằng word embeddings có ý nghĩa thay vì noise.
+
+Model parameters:
+  Total: 170.3M
+  Trainable: 30.0M
+  [Epoch 1] Batch 50/733 | Loss: 27.5984 | LR: 1.71e-06
+  [Epoch 1] Batch 100/733 | Loss: 26.7858 | LR: 3.41e-06
+  [Epoch 1] Batch 150/733 | Loss: 25.5834 | LR: 5.12e-06
+  [Epoch 1] Batch 200/733 | Loss: 24.1068 | LR: 6.82e-06
+  [Epoch 1] Batch 250/733 | Loss: 22.5523 | LR: 8.53e-06
+  [Epoch 1] Batch 300/733 | Loss: 21.1612 | LR: 1.02e-05
+  [Epoch 1] Batch 350/733 | Loss: 19.9465 | LR: 1.19e-05
+  [Epoch 1] Batch 400/733 | Loss: 18.9371 | LR: 1.36e-05
+  [Epoch 1] Batch 450/733 | Loss: 18.0349 | LR: 1.53e-05
+  [Epoch 1] Batch 500/733 | Loss: 17.2371 | LR: 1.71e-05
+  [Epoch 1] Batch 550/733 | Loss: 16.5202 | LR: 1.88e-05
+  [Epoch 1] Batch 600/733 | Loss: 15.8623 | LR: 2.05e-05
+  [Epoch 1] Batch 650/733 | Loss: 15.2901 | LR: 2.22e-05
+  [Epoch 1] Batch 700/733 | Loss: 14.7665 | LR: 2.39e-05
+
+============================================================
+Epoch 1/30 — 1573.0s
+  Train Loss: 14.4444
+  Val Loss:   6.8977
+  mA:         0.6082
+  Accuracy:   0.9457
+  Precision:  0.8338
+  Recall:     0.8090
+  F1:         0.8212
+============================================================
+
+  ★ Best model saved! mA=0.6082
+  [Epoch 2] Batch 50/733 | Loss: 7.4597 | LR: 2.67e-05
+  [Epoch 2] Batch 100/733 | Loss: 7.3499 | LR: 2.84e-05
+  [Epoch 2] Batch 150/733 | Loss: 7.2876 | LR: 3.01e-05
+  [Epoch 2] Batch 200/733 | Loss: 7.1500 | LR: 3.18e-05
+  [Epoch 2] Batch 250/733 | Loss: 7.0448 | LR: 3.35e-05
+  [Epoch 2] Batch 300/733 | Loss: 6.9858 | LR: 3.52e-05
+  [Epoch 2] Batch 350/733 | Loss: 6.9117 | LR: 3.69e-05
+  [Epoch 2] Batch 400/733 | Loss: 6.8182 | LR: 3.86e-05
+  [Epoch 2] Batch 450/733 | Loss: 6.7396 | LR: 4.03e-05
+  [Epoch 2] Batch 500/733 | Loss: 6.6680 | LR: 4.21e-05
+  [Epoch 2] Batch 550/733 | Loss: 6.6156 | LR: 4.38e-05
+  [Epoch 2] Batch 600/733 | Loss: 6.5595 | LR: 4.55e-05
+  [Epoch 2] Batch 650/733 | Loss: 6.5050 | LR: 4.72e-05
+  [Epoch 2] Batch 700/733 | Loss: 6.4519 | LR: 4.89e-05
+
+============================================================
+Epoch 2/30 — 1529.1s
+  Train Loss: 6.4064
+  Val Loss:   5.1086
+  mA:         0.6558
+  Accuracy:   0.9586
+  Precision:  0.8701
+  Recall:     0.8656
+  F1:         0.8679
+============================================================
+
+  ★ Best model saved! mA=0.6558
+  [Epoch 3] Batch 50/733 | Loss: 5.3737 | LR: 5.00e-05
+  [Epoch 3] Batch 100/733 | Loss: 5.3559 | LR: 5.00e-05
+  [Epoch 3] Batch 150/733 | Loss: 5.3639 | LR: 5.00e-05
+  [Epoch 3] Batch 200/733 | Loss: 5.3483 | LR: 5.00e-05
+  [Epoch 3] Batch 250/733 | Loss: 5.3125 | LR: 5.00e-05
+  [Epoch 3] Batch 300/733 | Loss: 5.2951 | LR: 5.00e-05
+  [Epoch 3] Batch 350/733 | Loss: 5.2609 | LR: 5.00e-05
+  [Epoch 3] Batch 400/733 | Loss: 5.2456 | LR: 5.00e-05
+  [Epoch 3] Batch 450/733 | Loss: 5.2353 | LR: 4.99e-05
+  [Epoch 3] Batch 500/733 | Loss: 5.2213 | LR: 4.99e-05
+  [Epoch 3] Batch 550/733 | Loss: 5.1957 | LR: 4.99e-05
+  [Epoch 3] Batch 600/733 | Loss: 5.1809 | LR: 4.99e-05
+  [Epoch 3] Batch 650/733 | Loss: 5.1642 | LR: 4.99e-05
+  [Epoch 3] Batch 700/733 | Loss: 5.1492 | LR: 4.99e-05
+
+============================================================
+Epoch 3/30 — 1529.4s
+  Train Loss: 5.1422
+  Val Loss:   4.4314
+  mA:         0.6764
+  Accuracy:   0.9634
+  Precision:  0.8880
+  Recall:     0.8776
+  F1:         0.8828
+============================================================
+
+  ★ Best model saved! mA=0.6764
