@@ -14,7 +14,7 @@ graph TD
     classDef data fill:#e8f5e9,stroke:#388e3c,stroke-width:2px,color:#000,rx:5px,ry:5px;
     classDef module fill:#f3e5f5,stroke:#8e24aa,stroke-width:2px,color:#000,rx:10px,ry:10px;
     classDef output fill:#ffebee,stroke:#d32f2f,stroke-width:2px,color:#000,rx:5px,ry:5px;
-    classDef hidden fill:#fff8e1,stroke:#fbc02d,stroke-width:2px,color:#000,stroke-dasharray: 5 5;
+    classDef hidd fill:#fff8e1,stroke:#fbc02d,stroke-width:2px,color:#000,stroke-dasharray: 5 5;
 
     %% INPUTS
     subgraph Data Input
@@ -25,8 +25,8 @@ graph TD
 
     %% HIDDEN WORDS
     subgraph Learnable Prompts
-        HW_Bg[["Group 0:<br>Background HW"]]:::hidden
-        HW_Attr[["Group 1-11:<br>Attribute HWs"]]:::hidden
+        HW_Bg[["Group 0:<br>Background HW"]]:::hidd
+        HW_Attr[["Group 1-11:<br>Attribute HWs"]]:::hidd
     end
 
     %% BACKGROUND PIPELINE
